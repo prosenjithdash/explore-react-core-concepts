@@ -1,7 +1,8 @@
 import './App.css'
 import ToDo from './ToDo'
 import ConditionalRendering from './conditionalRendering';
-
+import Actor from './Actor';
+import Singer from './Singer';
 
 //38-3 JSX, Its Rules And Add Dynamic Content To JSX In Your First Component
 
@@ -9,10 +10,24 @@ import ConditionalRendering from './conditionalRendering';
 // It's call components
 function App() {
 
+  // 38-8 (Advanced) Rendering Lists Of Users Using Map
+
+
+  let actors = ['Labib', 'Kishor', 'Proshanto'];
+
+  let singers = [
+  
+    {id: 1, name: 'Pritom', age: 24 },
+    { id: 2, name: 'Chircut', age: 32 },
+    { id: 3, name: 'KureGor', age: 25 }
+    
+  ]
   return (
     <>
 
       <h1>Vite + React</h1>
+
+
       {/* <Person></Person>
       <Person></Person>
       <Person></Person>
@@ -29,21 +44,30 @@ function App() {
       <Public grate='B' profesion='Business'></Public>
       <Public></Public> */}
 
-      <ToDo name='ReactJS'></ToDo>
+
+      {/* 38 - 06 Read Only Props Two Way Of Conditional Rendering */}
+      {/* <ToDo name='ReactJS'></ToDo>
       <ToDo name='Explore Core Concept part 01'></ToDo>
-      <ToDo></ToDo>
+      <ToDo></ToDo> */}
 
-      <ConditionalRendering work='CSS' isDone={ false}></ConditionalRendering>
+      {/* 38-7 Six Ways To Do Conditional Rendering: If, Ternary And AND OR
+       */}
+      {/* <ConditionalRendering work='CSS' isDone={true}></ConditionalRendering>
       <ConditionalRendering work='HTML' isDone={true}></ConditionalRendering>
-      <ConditionalRendering work='ReactJs' isDone={true}></ConditionalRendering>
+      <ConditionalRendering work='ReactJs' isDone={false}></ConditionalRendering> */}
+
+      {/* // 38-8 (Advanced) Rendering Lists Of Users Using Map */}
+
+      {/* <Actor name='Prosenjith Dash Pappu'></Actor>
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      } */}
       
-
+     
       
-
-
-
-
-
+      {
+        singers.map(singer => <Singer singer = {singer}></Singer>)
+      }
 
 
 
